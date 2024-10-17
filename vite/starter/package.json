@@ -1,0 +1,21 @@
+{
+    "name": "vite-necto-demo",
+    "version": "1.0.0",
+    "description": "A demo project for Necto using Vite",
+    "main": "index.js",
+    "scripts": {
+      "dev": "vite",
+      "build": "vite build",
+      "serve": "vite preview"
+    },
+    "dependencies": {
+      "vue": "^3.3.0"
+    },
+    "devDependencies": {
+      "vite": "^4.0.0",
+      "@vitejs/plugin-vue": "^4.0.0"
+    },
+    "author": "Your Name",
+    "license": "MIT"
+  }
+  
