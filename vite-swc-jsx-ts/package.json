@@ -1,0 +1,23 @@
+{
+  "name": "vite-swc-jsx-ts-demo",
+  "version": "1.0.0",
+  "description": "A demo project using Vite, SWC, Styled JSX, TypeScript and Necto",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "styled-jsx": "^5.0.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react-swc": "^4.0.0",
+    "vite": "^4.0.0",
+    "typescript": "^5.0.0"
+  },
+  "author": "The Necto Team",
+  "license": "MIT"
+}
