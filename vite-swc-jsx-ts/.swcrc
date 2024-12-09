@@ -1,35 +1,58 @@
 {
-    "jsc": {
-      "parser": {
-        "syntax": "typescript",
-        "tsx": true,
-        "decorators": true
+  "jsc": {
+    "parser": {
+      "syntax": "typescript",
+      "tsx": true,
+      "decorators": true
+    },
+    "transform": {
+      "react": {
+        "runtime": "automatic",
+        "pragma": "React.createElement",
+        "pragmaFrag": "React.Fragment"
       },
-      "transform": {
-        "react": {
-          "runtime": "automatic"
-        },
-        "legacyDecorator": true,
-        "useDefineForClassFields": true
-      },
-      "target": "es2022",
-      "loose": false
+      "legacyDecorator": true,
+      "useDefineForClassFields": true
     },
-    "module": {
-      "type": "es6",
-      "strict": true,
-      "noInterop": false
-    },
-    "minify": false,
-    "sourceMaps": true,
-    "extensions": {
-      "styledJsx": true
-    },
-    "plugins": [
-      [
-        "@necto/swc/plugins/styled-jsx",
-        {}
-      ]
+    "target": "es2022",
+    "loose": false
+  },
+  "module": {
+    "type": "es6",
+    "strict": true,
+    "noInterop": false
+  },
+  "minify": false,
+  "sourceMaps": true,
+  "env": {
+    "coreJs": "3",
+    "mode": "entry",
+    "targets": {
+      "browsers": [">0.25%", "not dead"]
+    }
+  },
+  "extensions": {
+    "styledJsx": true
+  },
+  "plugins": [
+    [
+      "@necto/swc/plugins/styled-jsx",
+      {}
+    ],
+    [
+      "@necto/swc/plugins/transform-imports",
+      {
+        "libraryName": "lodash",
+        "libraryDirectory": "",
+        "camel2DashComponentName": false
+      }
+    ],
+    [
+      "@necto/swc/plugins/plugin-transform-react-remove-prop-types",
+      {
+        "mode": "remove",
+        "removeImport": true
+      }
     ]
-  }
-  
+  ]
+}
