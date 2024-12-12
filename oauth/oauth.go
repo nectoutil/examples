@@ -11,9 +11,7 @@ import (
     "npkg.dev/oauth/google.v2"
 )
 
-var (
-    config *oauth.Config
-)
+var config *oauth.Config
 
 func init() {
     config = &oauth.Config{
